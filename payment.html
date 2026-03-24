@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Cozy Cafe</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body style="background: url('images/hero_bg.jpg') no-repeat center center fixed; background-size: cover;">
+
+    <!-- Navbar -->
+    <nav class="navbar" style="background-color: rgba(245, 235, 221, 0.9);">
+        <div class="container">
+            <a href="index.html" class="logo"><i class="fas fa-coffee"></i> Cozy Cafe</a>
+
+            <input type="checkbox" id="mobile-menu-checkbox">
+            <label for="mobile-menu-checkbox" class="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+
+            <ul class="nav-links">
+                <div class="nav-left">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="cart.html" class="nav-link">Cart <span class="cart-badge" style="display:none;">0</span></a></li>
+                </div>
+                <div class="nav-right">
+                    <li><a href="payment.html" class="btn">Order Now</a></li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Payment Section -->
+    <section class="section">
+        <div class="container">
+            <div class="glass-form fade-in">
+                <h2 class="text-center" style="margin-bottom: 30px;">Checkout</h2>
+
+                <form id="payment-form">
+
+                    <h4 style="margin-bottom: 20px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 10px;">
+                        Contact Information</h4>
+
+                    <div class="form-group">
+                        <label class="form-label" for="pay-name">Full Name</label>
+                        <input type="text" id="pay-name" class="form-input" placeholder="Ayush Kumar">
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-group">
+                            <label class="form-label" for="pay-email">Email</label>
+                            <input type="email" id="pay-email" class="form-input" placeholder="user@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="pay-phone">Phone</label>
+                            <input type="tel" id="pay-phone" class="form-input" placeholder="+91 12345 67890">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="pay-address">Delivery Address</label>
+                        <textarea id="pay-address" class="form-input" rows="3" placeholder="123 Main St, Apt 4B"
+                            style="resize: none;"></textarea>
+                    </div>
+
+                    <h4 style="margin: 30px 0 20px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 10px;">
+                        Payment Details</h4>
+
+                    <div class="form-group">
+                        <label class="form-label">Payment Method</label>
+                        <div style="display: flex; gap: 20px; margin-top: 10px;">
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                                <input type="radio" name="payment" value="upi" checked style="accent-color: var(--primary-color);">
+                                UPI / Paytm
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                                <input type="radio" name="payment" value="card" style="accent-color: var(--primary-color);">
+                                Credit/Debit Card
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="pay-card">UPI ID</label>
+                        <input type="text" id="pay-card" class="form-input" placeholder="yourname@upi">
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-group">
+                            <label class="form-label" for="pay-expiry">Expiry / Validity</label>
+                            <input type="text" id="pay-expiry" class="form-input" placeholder="MM/YY">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="pay-cvv">CVV</label>
+                            <input type="password" id="pay-cvv" class="form-input" placeholder="123">
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 30px; display: flex; justify-content: space-between; align-items: center;">
+                        <span id="pay-total" style="font-size: 1.2rem; font-weight: 700;">Total: ₹0.00</span>
+                        <button type="submit" class="btn">Place Order</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
