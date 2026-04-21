@@ -173,6 +173,33 @@
         </div>
     </section>
 
+    <!-- Stats Section (jQuery animated counters) -->
+    <section class="jq-stats-section" id="jq-stats-section">
+        <div class="container">
+            <div class="jq-stats-grid" id="jq-stats-grid">
+                <!-- jQuery populates this via $.each() -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section (jQuery AJAX) -->
+    <section class="jq-newsletter-section">
+        <div class="container">
+            <div class="jq-newsletter-card">
+                <h2>Stay in the Loop</h2>
+                <p>Subscribe for exclusive offers, new menu updates, and chai-time stories delivered to your inbox.</p>
+                <form id="jq-newsletter-form" class="jq-newsletter-form">
+                    <input type="email" id="jq-newsletter-email" class="form-input"
+                        placeholder="Enter your email address">
+                    <button type="submit" class="jq-newsletter-btn">
+                        <i class="fas fa-paper-plane"></i> Subscribe
+                    </button>
+                </form>
+                <p id="jq-newsletter-message" style="display:none;"></p>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -205,6 +232,10 @@
     </footer>
 
     <script src="script.js"></script>
+    <!-- jQuery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- jQuery Features Module -->
+    <script src="jquery-features.js"></script>
 </body>
 
 </html>
